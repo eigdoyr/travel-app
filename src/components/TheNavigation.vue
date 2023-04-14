@@ -1,9 +1,18 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link>
-    <router-link to="/Brazil">Brazil</router-link>
-    <router-link to="/Hawaii">Hawaii</router-link>
-    <router-link to="/Jamaica">Jamaica</router-link>
-    <router-link to="/Panama">Panama</router-link>
+    <router-link to="/" id="logo">Travel App</router-link>
+    <router-link
+      v-for="{ id, name } in destinations"
+      :key="id"
+      :to="{ name: 'destination.show', params: { id: id } }"
+    >
+      {{ name }}
+    </router-link>
   </div>
 </template>
+
+<script setup>
+import sourceData from "@/data.json";
+
+const destinations = sourceData.destinations;
+</script>
