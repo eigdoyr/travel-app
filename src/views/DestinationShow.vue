@@ -35,39 +35,4 @@ const destination = computed(() => {
     (destination) => destination.id === destinationId.value
   );
 });
-
-// let destination = null;
-
-// async function created() {
-//   const response = await fetch(
-//     `https://travel-dummy-api.netlify.app/${route.params.slug}.json`
-//   );
-//   destination = await response.json();
-// }
-
-// const initData = async () => {
-//   const response = await fetch(
-//     `https://travel-dummy-api.netlify.app/${route.params.slug}.json`
-//   );
-//   destination = await response.json();
-// };
-
-// const created = async () => {
-//   initData();
-// };
-
-// created();
-
-// export default {
-//   computed: {
-//     destinationId() {
-//       return parseInt(this.$route.params.id);
-//     },
-//     destination() {
-//       return sourceData.destinations.find(
-//         (destination) => destination.id === this.destinationId
-//       );
-//     },
-//   },
-// };
 </script>
